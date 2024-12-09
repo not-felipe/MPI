@@ -46,13 +46,13 @@ if rank == 0:
     global_mean = global_sum / global_count
     global_variance = (global_sum_sq / global_count) - global_mean ** 2
     global_std = np.sqrt(global_variance)
-    print(f"Média global: {global_mean}, Desvio padrão global: {global_std}")
+    print(f"Media global: {global_mean}, Desvio padrao global: {global_std}")
 
 # Fim do programa
 end_time = MPI.Wtime()
 
 # Relatório de tempos
 if rank == 0:
-    print(f"Tempo de distribuição: {dist_time - start_time:.4f} s")
-    print(f"Tempo de cálculo: {calc_time - dist_time:.4f} s")
+    print(f"Tempo de distribuicao: {dist_time - start_time:.4f} s")
+    print(f"Tempo de calculo: {calc_time - dist_time:.4f} s")
     print(f"Tempo total: {end_time - start_time:.4f} s")
